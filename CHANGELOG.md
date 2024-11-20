@@ -13,6 +13,7 @@
 - **11/19** - initiated typescript.js, tsconfig.json created. typescript to be compiled in /dist/index.js
 - **11/19** - initiated sass.js. scss to be compiled in /dist/styles.css
 - **11/19** - added watch commands for ts and scss for compiling
+- **11/19** - created .gitignore file 
 
 **CHANGED:**
 
