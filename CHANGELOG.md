@@ -17,6 +17,8 @@
 - **11/20** - began construction of html structuring
 - **11/21** - completed basic html structuring; each function being tested has it's own section for organizational purposes
 - **11/21** - finalized html structure, four functions to be tested and basic css styling
+- **11/21** - loaded tabler icons into project
+- **11/21** - finalized structuring of each section + inputs needed to set up js and further testing in console
 
 **CHANGED:**
 

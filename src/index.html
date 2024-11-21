@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +7,11 @@
     <title>Testing Codebase</title>
     <!-- css link-->
     <link rel="stylesheet" href="styles.css" />
+    <!-- tabler icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons-react/dist/index.umd.min.js"></script>
   </head>
   <body>
     <!-- begin main page content-->
@@ -14,7 +19,11 @@
       <!-- begin header -->
       <header>
         <h1>my testing codebase</h1>
-        <p>each section contains a different function to be tested. pull up the console to begin! go on and give it a whirl!</p>
+        <p>
+          each section contains a different function to be tested. some
+          functions require user input. mostly <i>all</i> of the tests will be
+          viewable in the console.
+        </p>
       </header>
       <!-- end header -->
       <!-- begin section wrapper -->
@@ -23,32 +32,78 @@
         <section class="s1">
           <h2>function #1</h2>
           <code>sumOfarray(arr)</code>
+          <p>
+            <i class="ti ti-bulb"></i> takes an array of numbers and returns
+            with the sum of all elements.
+          </p>
           <h3>instructions:</h3>
-          <p>explain test</p>
+          <p>
+            enter four random numbers to create an array, then click the button
+            to view the sum of that array! <b>hint:</b> separate each number by
+            commas (e.g., 1, 2, 3, 4)
+          </p>
+          <form id="s1Form">
+            <input type="text" id="s1Input" placeholder="1, 2, 3, 4" />
+            <button class="button" id="s1Btn">click!</button>
+          </form>
+          <p class="s1Results"></p>
         </section>
         <!-- end testing section 1 -->
         <!-- begin testing section 2 -->
         <section class="s2">
           <h2>function #2</h2>
           <code>findMax(arr)</code>
+          <p>
+            <i class="ti ti-bulb"></i> takes an array of numbers and returns
+            with the largest number.
+          </p>
           <h3>instructions:</h3>
-          <p>explain test</p>
+          <p>
+            enter four random numbers to create an array, then click the button
+            to calculate the largest number! <b>hint:</b> separate each number
+            by commas (e.g., 1, 2, 3, 4)
+          </p>
+          <form id="s2Form">
+            <input type="text" id="s2Input" placeholder="1, 2, 3, 4" />
+            <button class="button" id="s2Btn">click!</button>
+          </form>
         </section>
         <!-- end testing section 2 -->
         <!-- begin testing section 3 -->
         <section class="s3">
           <h2>function #3</h2>
           <code>countVowels(str)</code>
+          <p>
+            <i class="ti ti-bulb"></i> counts the number of vowels in a string
+            and returns that amount.
+          </p>
           <h3>instructions:</h3>
-          <p>explain test</p>
+          <p>
+            enter your first name and click the button to count the number of
+            vowels that appear in your name!
+          </p>
+          <form id="s3Form">
+            <div class="s3Form">
+              <label for="name">enter your name:</label>
+              <input type="text" name="name" id="name" />
+              <button class="button" id="s3Btn">click!</button>
+            </div>
+          </form>
+          <p class="s3Results"></p>
         </section>
         <!-- end testing section 3 -->
         <!-- begin testing section 4 -->
         <section class="s4">
           <h2>function #4</h2>
           <code>reverseString(str)</code>
+          <p>
+            <i class="ti ti-bulb"></i> reverses the inputted string and returns
+            with that reversed string.
+          </p>
           <h3>instructions:</h3>
-          <p>explain test</p>
+          <p>click the button to return the reversed string of text!</p>
+          <blockquote>No, Luke. I'm your father.</blockquote>
+          <button class="button" id="s4Btn">click!</button>
         </section>
         <!-- end testing section 4 -->
       </div>
