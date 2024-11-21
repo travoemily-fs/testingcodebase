@@ -13,7 +13,10 @@
 - **11/19** - initiated typescript.js, tsconfig.json created. typescript to be compiled in /dist/index.js
 - **11/19** - initiated sass.js. scss to be compiled in /dist/styles.css
 - **11/19** - added watch commands for ts and scss for compiling
-- **11/19** - created .gitignore file 
+- **11/19** - created .gitignore file (should've done it before adding the framework... opps)
+- **11/20** - began construction of html structuring
+- **11/21** - completed basic html structuring; each function being tested has it's own section for organizational purposes
+- **11/21** - finalized html structure, four functions to be tested and basic css styling
 
 **CHANGED:**
 

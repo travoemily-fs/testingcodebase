@@ -1,0 +1,199 @@
+// universal styles
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// body styles
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: green;
+}
+
+// main styles
+main {
+  flex: 1;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// header styles
+header {
+  background-color: aquamarine;
+  width: 100%;
+  height: 150px;
+  padding: 16px 0 16px 0;
+  align-content: center;
+  text-align: center;
+
+  h1 {
+    text-transform: lowercase;
+  }
+
+  p {
+    width: 370px;
+    margin: auto;
+    line-height: 14px;
+    padding: 10px 0 0 0;
+  }
+}
+
+// section wrapper styles
+#sectionWrap {
+  width: 800px;
+  height: auto;
+  padding: 20px 0 20px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+}
+
+// section styles
+@mixin h2-styles($padding: 15px) {
+  text-align: center;
+  padding-top: $padding;
+  padding-bottom: 5px;
+}
+
+@mixin h3-styles($padding: 10px) {
+  text-align: center;
+  padding-top: $padding;
+}
+
+@mixin section-styles($padding: 10px) {
+  padding-top: $padding;
+  padding-bottom: $padding;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@mixin code-styles {
+  text-align: center;
+  background-color: white;
+  padding: 5px;
+  width: 150px;
+  display: inline-block;
+}
+
+@mixin p-styles($padding: 10px, $width: 80%) {
+  margin-top: 10px;
+  padding-bottom: $padding;
+  width: $width;
+  text-align: justify;
+}
+
+section.s1 {
+  background-color: blue;
+  @include section-styles;
+
+  h2 {
+    @include h2-styles;
+  }
+
+  h3 {
+    @include h3-styles;
+  }
+
+  code {
+    @include code-styles;
+  }
+
+  p {
+    @include p-styles;
+  }
+}
+
+section.s2 {
+  background-color: red;
+  @include section-styles;
+
+  h2 {
+    @include h2-styles;
+  }
+
+  h3 {
+    @include h3-styles;
+  }
+
+  code {
+    @include code-styles;
+  }
+
+  p {
+    @include p-styles;
+  }
+}
+
+section.s3 {
+  background-color: purple;
+  @include section-styles;
+
+  h2 {
+    @include h2-styles;
+  }
+
+  h3 {
+    @include h3-styles;
+  }
+
+  code {
+    @include code-styles;
+  }
+
+  p {
+    @include p-styles;
+  }
+}
+
+section.s4 {
+  background-color: chocolate;
+  @include section-styles;
+
+  h2 {
+    @include h2-styles;
+  }
+
+  h3 {
+    @include h3-styles;
+  }
+
+  code {
+    @include code-styles;
+  }
+
+  p {
+    @include p-styles;
+  }
+}
+
+// footer styles
+footer {
+  margin-top: auto;
+  width: 100%;
+  height: 100px;
+  background-color: azure;
+  align-content: center;
+  text-align: center;
+
+  h3 {
+    text-transform: lowercase;
+  }
+
+  p {
+    margin: auto;
+  }
+}
