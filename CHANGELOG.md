@@ -19,10 +19,12 @@
 - **11/21** - finalized html structure, four functions to be tested and basic css styling
 - **11/21** - loaded tabler icons into project
 - **11/21** - finalized structuring of each section + inputs needed to set up js and further testing in console
+- **11/22** - finalized on project color palette
+- **11/22** - completed the visual aspect of the project
 
 **CHANGED:**
 
-- n/a
+- **11/22** - altered the functionality of function #4 to a user inputted string of text rather than a pre-generated string (for testability)
 
 **FIXED:**
 

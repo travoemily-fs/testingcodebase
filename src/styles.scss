@@ -5,13 +5,25 @@
   box-sizing: border-box;
 }
 
+// doc colors
+$bg: #1c0f13;
+$sectionBG: #0d070994;
+$accentBG: #6e7e85;
+$shadow: #000000;
+$highlight: #c9e2e261;
+$text: #e2e2e2;
+$accent1: #b7cece;
+$accent2: #bbbac6;
+
 // body styles
 body {
+  font-family: "all-round-gothic", sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   margin: 0;
-  background-color: green;
+  color: $text;
+  background-color: $bg;
 }
 
 // main styles
@@ -26,7 +38,7 @@ main {
 
 // header styles
 header {
-  background-color: aquamarine;
+  background-color: $bg;
   width: 100%;
   height: 150px;
   padding: 16px 0 16px 0;
@@ -35,11 +47,14 @@ header {
 
   h1 {
     text-transform: lowercase;
+    color: $accent2;
   }
 
   p {
-    width: 370px;
+    width: 420px;
     margin: auto;
+    text-align: justify;
+    text-align-last: center;
     line-height: 18px;
     padding: 10px 0 0 0;
   }
@@ -53,28 +68,51 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
   align-content: center;
   margin: auto;
+
+  b {
+    color: $accent2;
+    text-shadow: 0 0 1px $accent2;
+    letter-spacing: 0.5px;
+    font-style: italic;
+    font-weight: 700;
+    text-decoration: 1px underline $accent2;
+  }
+
+  i {
+    color: $accent1;
+    text-shadow: 0 0 2px $accent1;
+  }
 }
 
 // section styles
 @mixin h2-styles($padding: 15px) {
   text-align: center;
+  color: $accent1;
   padding-top: $padding;
   padding-bottom: 5px;
 }
 
 @mixin h3-styles($padding: 10px) {
   text-align: center;
+  font-family: "cake-mono", sans-serif;
+  color: $accent2;
   padding-top: $padding;
 }
 
 @mixin section-styles($padding: 10px) {
+  padding-left: 15px;
+  padding-right: 15px;
   padding-top: $padding;
   padding-bottom: $padding;
+  background-color: $sectionBG;
+  box-shadow: inset 0px 0px 3px $shadow, inset 0px 0px 2px $highlight,
+    0px 0px 2px $shadow;
   display: flex;
+  border-radius: 6px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -83,7 +121,10 @@ header {
 
 @mixin code-styles {
   text-align: center;
-  background-color: white;
+  background-color: $accentBG;
+  box-shadow: 0px 0px 2px $accentBG;
+  border-radius: 2px;
+  margin: 8px 0 8px 0;
   padding: 5px;
   width: 150px;
   display: inline-block;
@@ -91,13 +132,57 @@ header {
 
 @mixin p-styles($padding: 10px, $width: 80%) {
   margin-top: 10px;
+  line-height: 19px;
   padding-bottom: $padding;
   width: $width;
   text-align: justify;
 }
 
+@mixin btn-styles($padding: 6.5px) {
+  font-family: "all-round-gothic", sans-serif;
+  background-color: $accentBG;
+  box-shadow: inset 0px 0px 2px $shadow, inset 0px 0px 1px $highlight,
+    0px 0px 2px $shadow;
+  padding: $padding;
+  border-radius: 2px;
+  color: $text;
+  border: none;
+
+  &:hover {
+    background-color: #505d62;
+  }
+}
+
+@mixin form-styles($padding: 10px) {
+  padding: $padding;
+  margin-top: 10px;
+}
+
+@mixin input-styles($padding: 5px) {
+  padding: $padding;
+  font-family: "all-round-gothic", sans-serif;
+  box-shadow: inset 0px 0px 2px $shadow, inset 0px 0px 1px $highlight,
+    0px 0px 2px $shadow;
+  border-radius: 2px;
+  background-color: $sectionBG;
+  border: 0.5px solid $text;
+
+  &:focus {
+    outline: $bg;
+    color: $text;
+  }
+}
+
+blockquote {
+  border-left: 2px solid $accent2;
+  border-right: 2px solid $accent2;
+  padding: 0 4px 0 4px;
+  border-radius: 8px;
+  width: 75%;
+  margin: 8px 0 5px 0;
+}
+
 section.s1 {
-  background-color: blue;
   @include section-styles;
 
   h2 {
@@ -114,11 +199,22 @@ section.s1 {
 
   p {
     @include p-styles;
+  }
+
+  button {
+    @include btn-styles;
+  }
+
+  input {
+    @include input-styles;
+  }
+
+  form {
+    @include form-styles;
   }
 }
 
 section.s2 {
-  background-color: red;
   @include section-styles;
 
   h2 {
@@ -135,11 +231,22 @@ section.s2 {
 
   p {
     @include p-styles;
+  }
+
+  button {
+    @include btn-styles;
+  }
+
+  input {
+    @include input-styles;
+  }
+
+  form {
+    @include form-styles;
   }
 }
 
 section.s3 {
-  background-color: purple;
   @include section-styles;
 
   h2 {
@@ -156,11 +263,29 @@ section.s3 {
 
   p {
     @include p-styles;
+  }
+
+  button {
+    @include btn-styles;
+  }
+
+  input {
+    @include input-styles;
+  }
+
+  form {
+    @include form-styles;
+
+    label {
+      display: block;
+      font-weight: 700;
+      color: $accent1;
+      padding-bottom: 5px;
+    }
   }
 }
 
 section.s4 {
-  background-color: chocolate;
   @include section-styles;
 
   h2 {
@@ -177,6 +302,25 @@ section.s4 {
 
   p {
     @include p-styles;
+  }
+
+  button {
+    @include btn-styles;
+  }
+
+  input {
+    @include input-styles;
+  }
+
+  form {
+    @include form-styles;
+
+    label {
+      display: block;
+      font-weight: 700;
+      color: $accent1;
+      padding-bottom: 5px;
+    }
   }
 }
 
@@ -185,12 +329,14 @@ footer {
   margin-top: auto;
   width: 100%;
   height: 100px;
-  background-color: azure;
+  background-color: $bg;
   align-content: center;
   text-align: center;
 
   h3 {
+    font-family: "cake-mono", sans-serif;
     text-transform: lowercase;
+    color: $accent2;
   }
 
   p {

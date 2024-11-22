@@ -12,6 +12,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons-react/dist/index.umd.min.js"></script>
+    <!-- adobe hosted fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/acv6zht.css" />
   </head>
   <body>
     <!-- begin main page content-->
@@ -20,9 +22,8 @@
       <header>
         <h1>my testing codebase</h1>
         <p>
-          each section contains a different function to be tested. some
-          functions require user input. mostly <i>all</i> of the tests will be
-          viewable in the console.
+          each section contains a different function to be tested. each function
+          requires user input. go ahead and give it a whirl!
         </p>
       </header>
       <!-- end header -->
@@ -36,14 +37,15 @@
             <i class="ti ti-bulb"></i> takes an array of numbers and returns
             with the sum of all elements.
           </p>
+          
           <h3>instructions:</h3>
           <p>
             enter four random numbers to create an array, then click the button
-            to view the sum of that array! <b>hint:</b> separate each number by
-            commas (e.g., 1, 2, 3, 4)
-          </p>
+            to view the sum of that array! </p>
+            <blockquote><b>hint:</b> separate each number by
+            commas (e.g., 1, 2, 3, 4)</blockquote>
           <form id="s1Form">
-            <input type="text" id="s1Input" placeholder="1, 2, 3, 4" />
+            <input type="text" id="s1Input" placeholder="1, 2, 3, 4" required />
             <button class="button" id="s1Btn">click!</button>
           </form>
           <p class="s1Results"></p>
@@ -60,11 +62,13 @@
           <h3>instructions:</h3>
           <p>
             enter four random numbers to create an array, then click the button
-            to calculate the largest number! <b>hint:</b> separate each number
-            by commas (e.g., 1, 2, 3, 4)
-          </p>
+            to calculate the largest number! </p>
+            <blockquote>
+            <b>hint:</b> separate each number
+            by commas (e.g., 1, 2, 3, 4)</blockquote>
+          
           <form id="s2Form">
-            <input type="text" id="s2Input" placeholder="1, 2, 3, 4" />
+            <input type="text" id="s2Input" placeholder="1, 2, 3, 4" required />
             <button class="button" id="s2Btn">click!</button>
           </form>
         </section>
@@ -85,7 +89,12 @@
           <form id="s3Form">
             <div class="s3Form">
               <label for="name">enter your name:</label>
-              <input type="text" name="name" id="name" />
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Betty Boop"
+                required />
               <button class="button" id="s3Btn">click!</button>
             </div>
           </form>
@@ -101,9 +110,18 @@
             with that reversed string.
           </p>
           <h3>instructions:</h3>
-          <p>click the button to return the reversed string of text!</p>
-          <blockquote>No, Luke. I'm your father.</blockquote>
-          <button class="button" id="s4Btn">click!</button>
+          <p>
+            type a string of text and press the button to see it reversed!</p>
+           <blockquote> <b>hint:</b> numbers <i>aren't</i> permissible.</blockquote>
+          <form id="s4Form">
+            <label for="s4String">enter your text:</label>
+            <input
+              type="text" name="s4String"
+              id="s4Input"
+              placeholder="No, Luke. I'm your father."
+              required />
+            <button class="button" id="s4Btn">click!</button>
+          </form>
         </section>
         <!-- end testing section 4 -->
       </div>
