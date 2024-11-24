@@ -44,11 +44,11 @@
             to view the sum of that array! </p>
             <blockquote><b>hint:</b> separate each number by
             commas (e.g., 1, 2, 3, 4)</blockquote>
-          <form id="s1Form">
-            <input type="text" id="s1Input" placeholder="1, 2, 3, 4" required />
+          <form name="s1Form">
+            <input type="text" id="s1Input" placeholder="1, 2, 3, 4" min=0 required />
             <button class="button" id="s1Btn">click!</button>
           </form>
-          <p class="s1Results"></p>
+          <div class="s1Results"></div>
         </section>
         <!-- end testing section 1 -->
         <!-- begin testing section 2 -->
@@ -62,15 +62,15 @@
           <h3>instructions:</h3>
           <p>
             enter four random numbers to create an array, then click the button
-            to calculate the largest number! </p>
+            to determine the largest number! </p>
             <blockquote>
             <b>hint:</b> separate each number
             by commas (e.g., 1, 2, 3, 4)</blockquote>
-          
-          <form id="s2Form">
+          <form name="s2Form">
             <input type="text" id="s2Input" placeholder="1, 2, 3, 4" required />
             <button class="button" id="s2Btn">click!</button>
           </form>
+          <div class="s2Results"></div>
         </section>
         <!-- end testing section 2 -->
         <!-- begin testing section 3 -->
@@ -86,19 +86,22 @@
             enter your first name and click the button to count the number of
             vowels that appear in your name!
           </p>
-          <form id="s3Form">
+          <blockquote>
+            <b>hint:</b> y's are considered vowels!
+          </blockquote>
+          <form name="s3Form">
             <div class="s3Form">
               <label for="name">enter your name:</label>
               <input
                 type="text"
                 name="name"
-                id="name"
+                id="s3Input"
                 placeholder="Betty Boop"
                 required />
               <button class="button" id="s3Btn">click!</button>
             </div>
           </form>
-          <p class="s3Results"></p>
+          <div class="s3Results"></div>
         </section>
         <!-- end testing section 3 -->
         <!-- begin testing section 4 -->
@@ -113,7 +116,7 @@
           <p>
             type a string of text and press the button to see it reversed!</p>
            <blockquote> <b>hint:</b> numbers <i>aren't</i> permissible.</blockquote>
-          <form id="s4Form">
+          <form name="s4Form">
             <label for="s4String">enter your text:</label>
             <input
               type="text" name="s4String"
@@ -122,6 +125,7 @@
               required />
             <button class="button" id="s4Btn">click!</button>
           </form>
+          <div class="s4Results"></div>
         </section>
         <!-- end testing section 4 -->
       </div>

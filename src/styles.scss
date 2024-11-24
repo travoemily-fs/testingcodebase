@@ -173,6 +173,30 @@ header {
   }
 }
 
+.s1Results,
+.s2Results,
+.s3Results,
+.s4Results {
+  position: relative;
+  padding: 10px 20px 10px 20px;
+  color: white;
+  height: auto;
+  text-align: justify;
+  text-align-last:center;
+  width: fit-content;
+  border-radius: 4px;
+  vertical-align: middle;
+  opacity: 0;
+
+  span {
+    color:$accent1;
+    text-shadow:0 0 2px $accent1;
+    font-weight:700;
+    text-transform:uppercase;
+    font-family: "cake-mono", sans-serif;
+  }
+}
+
 blockquote {
   border-left: 2px solid $accent2;
   border-right: 2px solid $accent2;
